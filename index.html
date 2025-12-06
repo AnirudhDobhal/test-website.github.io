@@ -236,45 +236,31 @@
         </div>
     </section>
 
-    <section id="testimonials" class="section-padding">
+    <section id="reviews" class="section-padding overflow-hidden">
         <div class="container">
             <div class="section-header reveal fade-bottom">
-                <h2>Wall of Love</h2>
-                <p>Trusted by car owners across the city.</p>
+                <div class="google-badge-header">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg" alt="Google Logo" class="google-g-logo">
+                    <span>Rated 4.9/5 Stars</span>
+                </div>
+                <h2>India Loves Carmaa</h2>
+                <p>See why thousands trust us with their premium vehicles.</p>
             </div>
-            <div class="testimonials-grid">
-                <div class="testimonial-card reveal fade-up delay-1">
-                    <div class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
-                            class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
-                            class="fa-solid fa-star"></i></div>
-                    <p>"Absolutely game changer! Saved me 3 hours of waiting at a car wash. The finish is showroom
-                        quality."</p>
-                    <div class="user-info">
-                        <strong>Rahul Sharma</strong>
-                        <span>BMW X5 Owner</span>
-                    </div>
+
+            <!-- Dynamic Reviews Slider Container -->
+            <div class="reviews-slider-container reveal fade-up delay-1">
+                <div class="reviews-track" id="reviewsTrack">
+                    <!-- Reviews will be injected here by script.js -->
                 </div>
-                <div class="testimonial-card reveal fade-up delay-2">
-                    <div class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
-                            class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
-                            class="fa-solid fa-star"></i></div>
-                    <p>"The app is so easy to use. I booked a quick wash while at the gym and came out to a spotless
-                        car!"</p>
-                    <div class="user-info">
-                        <strong>Priya Patel</strong>
-                        <span>Honda City Owner</span>
-                    </div>
+                <div class="reviews-track" id="reviewsTrackDuplicate">
+                    <!-- Duplicate for infinite scroll effect -->
                 </div>
-                <div class="testimonial-card reveal fade-up delay-3">
-                    <div class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
-                            class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
-                            class="fa-solid fa-star"></i></div>
-                    <p>"Their premium spa package is worth every rupee. My 5-year old car looks brand new again."</p>
-                    <div class="user-info">
-                        <strong>Amit Verma</strong>
-                        <span>Creta Owner</span>
-                    </div>
-                </div>
+            </div>
+            
+            <div class="review-actions reveal fade-up delay-2">
+                <a href="#" class="btn btn-outline btn-dark-text">
+                    <i class="fa-brands fa-google"></i> Write a Review
+                </a>
             </div>
         </div>
     </section>
