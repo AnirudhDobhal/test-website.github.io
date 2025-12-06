@@ -1469,4 +1469,211 @@ body {
     background: linear-gradient(135deg, #4285F4, #DB4437, #F4B400, #0F9D58);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+
+}
+
+/* Carmaa Promises Section */
+.promises-grid .promise-card {
+    text-align: center;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    background: #fff;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.02);
+}
+
+.icon-gold {
+    color: #F59E0B;
+    background: #FEF3C7;
+}
+
+.icon-green {
+    color: #10B981;
+    background: #D1FAE5;
+}
+
+.icon-blue {
+    color: #3B82F6;
+    background: #DBEAFE;
+}
+
+/* Refer & Earn Section */
+.refer-banner {
+    background: linear-gradient(135deg, #F0F9FF 0%, #E0F2FE 100%);
+    border-radius: 30px;
+    padding: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    overflow: hidden;
+    gap: 40px;
+}
+
+.refer-content {
+    flex: 1;
+    z-index: 2;
+}
+
+.refer-content .badge-pill {
+    display: inline-block;
+    background: #0EA5E9;
+    color: white;
+    padding: 6px 16px;
+    border-radius: 50px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.refer-content h2 {
+    font-size: 3rem;
+    line-height: 1.2;
+    margin-bottom: 15px;
+    color: #0F172A;
+}
+
+.refer-content p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    color: #475569;
+    max-width: 500px;
+}
+
+.refer-visual {
+    flex: 1;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    z-index: 2;
+}
+
+/* Avatar Network Animation */
+.avatar-network {
+    position: relative;
+    width: 350px;
+    height: 350px;
+}
+
+.avatar {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 3px solid white;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    position: absolute;
+    z-index: 2;
+    animation: float-avatar 6s ease-in-out infinite;
+}
+
+.av-center {
+    width: 90px;
+    height: 90px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 3;
+    border-color: #ffffff;
+    box-shadow: 0 0 30px rgba(27, 78, 155, 0.2);
+}
+
+.av-center img {
+    width: 100%;
+    height: 100%;
+}
+
+.av-1 {
+    top: 10%;
+    left: 50%;
+    animation-delay: 0s;
+}
+
+.av-2 {
+    top: 40%;
+    left: 10%;
+    animation-delay: 1s;
+}
+
+.av-3 {
+    top: 40%;
+    right: 10%;
+    animation-delay: 2s;
+}
+
+.av-4 {
+    bottom: 10%;
+    left: 60%;
+    animation-delay: 3s;
+}
+
+.connection-lines {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 300px;
+    height: 300px;
+    transform: translate(-50%, -50%);
+    border: 2px dashed rgba(14, 165, 233, 0.3);
+    border-radius: 50%;
+    z-index: 1;
+    animation: spin-slow 20s linear infinite;
+}
+
+.connection-lines::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 180px;
+    height: 180px;
+    transform: translate(-50%, -50%);
+    border: 2px dashed rgba(14, 165, 233, 0.3);
+    border-radius: 50%;
+}
+
+@keyframes float-avatar {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+@keyframes spin-slow {
+    from {
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+
+    to {
+        transform: translate(-50%, -50%) rotate(360deg);
+    }
+}
+
+/* Footer Update */
+.made-with-love {
+    text-align: center;
+    font-size: 0.95rem;
+    margin-bottom: 10px;
+    color: #64748B;
+    font-weight: 500;
+}
+
+@media (max-width: 991px) {
+    .refer-banner {
+        flex-direction: column;
+        text-align: center;
+        padding: 40px 20px;
+    }
+
+    .refer-visual {
+        margin-top: 20px;
+    }
+
+    .avatar-network {
+        width: 300px;
+        height: 300px;
+    }
 }
