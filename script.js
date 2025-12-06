@@ -114,7 +114,7 @@ document.addEventListener('DOMContentLoaded', () => {
                                 <span>${review.role}</span>
                             </div>
                         </div>
-                        <img src="https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg" alt="Google" class="google-icon-small">
+                        <i class="fa-brands fa-google google-icon-small colored-google-icon"></i>
                     </div>
                     <div class="review-stars">
                         ${starHtml}
