@@ -87,6 +87,7 @@ body {
 .logo span {
     background: var(--gradient);
     -webkit-background-clip: text;
+    background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
@@ -276,6 +277,7 @@ body {
 .hero .highlight {
     background: var(--gradient);
     -webkit-background-clip: text;
+    background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
@@ -926,22 +928,169 @@ body {
 }
 
 /* Simple Responsive Tweaks */
-@media (max-width: 768px) {
+/* Comprehensive Responsive Design & Mobile UX Optimization */
+@media (max-width: 991px) {
     .hero h1 {
-        font-size: 3rem;
+        font-size: 3.5rem;
     }
 
     .footer-content {
+        grid-template-columns: 1fr 1fr !important;
+        gap: 40px;
+    }
+
+    .refer-banner {
+        padding: 40px;
+    }
+}
+
+@media (max-width: 768px) {
+    :root {
+        --section-padding: 60px 0;
+    }
+
+    .section-padding {
+        padding: var(--section-padding) !important;
+    }
+
+    .hero {
+        height: auto;
+        padding: 120px 0 80px;
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+    }
+
+    .hero h1 {
+        font-size: 2.8rem;
+        letter-spacing: 0;
+        line-height: 1.2;
+    }
+
+    .hero p {
+        font-size: 1.1rem;
+        margin-bottom: 30px;
+    }
+
+    .navbar {
+        padding: 12px 0;
+    }
+
+    .logo {
+        font-size: 1.5rem;
+    }
+
+    .nav-links {
+        display: flex !important;
+        gap: 15px;
+    }
+
+    .nav-links .btn {
+        padding: 8px 16px;
+        font-size: 0.9rem;
+    }
+
+    .services-grid,
+    .steps-grid,
+    .promises-grid {
+        grid-template-columns: 1fr !important;
+        gap: 20px;
+    }
+
+    .split-layout {
         grid-template-columns: 1fr;
         text-align: center;
     }
 
-    .nav-links {
-        display: none;
+    .split-image {
+        order: -1;
+        margin-bottom: 30px;
     }
 
-    .navbar .container {
+    .feature-list li {
         justify-content: center;
+    }
+
+    .infographic-stats {
+        padding: 30px 20px;
+        margin-top: 40px;
+        gap: 30px;
+    }
+
+    .stat-item h3 {
+        font-size: 2rem;
+    }
+
+    .footer-content {
+        grid-template-columns: 1fr !important;
+        text-align: center;
+        gap: 40px;
+    }
+
+    .footer-col {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .social-links,
+    .contact-row {
+        justify-content: center;
+    }
+
+    .refer-banner {
+        flex-direction: column !important;
+        text-align: center;
+        padding: 40px 20px;
+    }
+
+    .refer-visual {
+        width: 100%;
+        margin-top: 20px;
+    }
+
+    .avatar-network {
+        transform: scale(0.85);
+        margin: 0 auto;
+        width: 330px;
+        height: 330px;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 0 15px;
+    }
+
+    .hero h1 {
+        font-size: 2.2rem;
+    }
+
+    .badge {
+        font-size: 0.75rem;
+        padding: 6px 15px;
+    }
+
+    .cta-group {
+        flex-direction: column;
+        width: 100%;
+        gap: 12px;
+    }
+
+    .cta-group .btn {
+        width: 100%;
+        font-size: 1rem;
+        padding: 14px 24px;
+    }
+
+    .service-card,
+    .promise-card {
+        padding: 30px 20px;
+    }
+
+    .scene-visual {
+        height: 180px;
+        width: 100%;
     }
 }
 
@@ -1338,6 +1487,7 @@ body {
     line-height: 1.5;
     display: -webkit-box;
     -webkit-line-clamp: 4;
+    line-clamp: 4;
     -webkit-box-orient: vertical;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -1439,6 +1589,7 @@ body {
     margin-bottom: 5px;
     background: var(--gradient);
     -webkit-background-clip: text;
+    background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
@@ -1460,6 +1611,7 @@ body {
 .colored-google-icon {
     background: linear-gradient(135deg, #4285F4, #DB4437, #F4B400, #0F9D58);
     -webkit-background-clip: text;
+    background-clip: text;
     -webkit-text-fill-color: transparent;
     display: inline-block;
 }
@@ -1468,31 +1620,102 @@ body {
     font-size: 1.2rem;
     background: linear-gradient(135deg, #4285F4, #DB4437, #F4B400, #0F9D58);
     -webkit-background-clip: text;
+    background-clip: text;
     -webkit-text-fill-color: transparent;
 
 }
 
-/* Carmaa Promises Section */
+/* Carmaa Promises Section - Premium UX Upgrade */
 .promises-grid .promise-card {
     text-align: center;
-    border: 1px solid rgba(0, 0, 0, 0.05);
-    background: #fff;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.02);
+    border: 1px solid var(--border-light);
+    background: #ffffff;
+    padding: 50px 30px;
+    border-radius: 32px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.03);
+    transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.promises-grid .promise-card:hover {
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0 20px 60px rgba(27, 78, 155, 0.08);
+    border-color: var(--primary);
+}
+
+.promises-grid .promise-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at top right, rgba(27, 78, 155, 0.03), transparent 70%);
+    z-index: -1;
+}
+
+/* Icon Box Styling */
+.icon-box {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 24px;
+    /* Squircle style */
+    font-size: 2rem;
+    position: relative;
+    transition: all 0.4s ease;
+}
+
+.floating {
+    animation: float-icon 4s ease-in-out infinite;
+}
+
+@keyframes float-icon {
+
+    0%,
+    100% {
+        transform: translateY(0) rotate(0);
+    }
+
+    50% {
+        transform: translateY(-8px) rotate(5deg);
+    }
 }
 
 .icon-gold {
-    color: #F59E0B;
-    background: #FEF3C7;
+    color: #b45309;
+    background: #fef3c7;
+    box-shadow: 0 10px 20px rgba(245, 158, 11, 0.15);
 }
 
 .icon-green {
-    color: #10B981;
-    background: #D1FAE5;
+    color: #047857;
+    background: #d1fae5;
+    box-shadow: 0 10px 20px rgba(16, 185, 129, 0.15);
 }
 
 .icon-blue {
-    color: #3B82F6;
-    background: #DBEAFE;
+    color: #1d4ed8;
+    background: #dbeafe;
+    box-shadow: 0 10px 20px rgba(59, 130, 246, 0.15);
+}
+
+.promise-card h3 {
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: var(--text-main);
+    margin-bottom: 15px;
+}
+
+.promise-card p {
+    font-size: 1.05rem;
+    color: var(--text-gray);
+    line-height: 1.7;
 }
 
 /* Refer & Earn Section */
@@ -1661,19 +1884,4 @@ body {
     font-weight: 500;
 }
 
-@media (max-width: 991px) {
-    .refer-banner {
-        flex-direction: column;
-        text-align: center;
-        padding: 40px 20px;
-    }
-
-    .refer-visual {
-        margin-top: 20px;
-    }
-
-    .avatar-network {
-        width: 300px;
-        height: 300px;
-    }
-}
+/* End of Design System */
